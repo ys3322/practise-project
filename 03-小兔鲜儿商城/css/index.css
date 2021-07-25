@@ -1,5 +1,5 @@
 body {
-    height: 3000px;
+    height: 5000px;
     background-color: #ffffff;
     font: 16px/1.5 sans-serif;
 }
@@ -366,21 +366,234 @@ body {
 }
 
 /*---------- 人气推荐 ----------------*/
-.hot .new-item p>span.info{
+.hot .new-item p > span.info {
     color: #999999;
     font-size: 16px;
 }
-.hot .new-item{
+
+.hot .new-item {
     background: #fff;
 }
-.hot .new-item:after{
+
+.hot .new-item:after {
     content: '';
     display: none;
 }
 
 /*--------------------生鲜---------------------*/
-/*服饰*/
+.fresh {
+    overflow: hidden;
+}
 
+.fresh .fresh-title {
+    margin-top: 40px;
+    height: 60px;
+}
+
+.fresh .fresh-title > h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    color: #333;
+}
+
+.fresh .fresh-title > ul {
+    float: left;
+    margin-top: 9px;
+    margin-left: 635px;
+}
+
+.fresh .fresh-title > ul > li {
+    float: left;
+}
+
+.fresh .fresh-title > ul > li > a {
+    color: #333;
+    font-size: 16px;
+    padding: 0 12px;
+}
+
+.fresh .fresh-title > ul > li > a:hover {
+    background: #27ba9b;
+    color: #fff;
+}
+
+.fresh .fresh-title > .more {
+    float: right;
+    color: #333;
+    margin-top: 10px;
+}
+
+.fresh .fresh-title > .more:hover {
+    color: #27ba9b;
+}
+
+.fresh .fresh-title > .more:after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    margin-left: 10px;
+    background: url("../img/sprites.png") 0 -109px;
+}
+
+.fresh .cover {
+    float: left;
+    width: 240px;
+    height: 610px;
+}
+
+.fresh .cover > img {
+    width: 100%;
+    height: 100%;
+}
+
+.fresh .fresh-goods {
+    float: left;
+    overflow: hidden;
+}
+
+.fresh .fresh-goods li {
+    position: relative;
+    float: left;
+    width: 240px;
+    height: 304px;
+    margin-left: 10px;
+    /*border: 2px #27ba9b solid;*/
+    border: 2px transparent solid;
+    box-sizing: border-box;
+    transition: all 0.5s;
+}
+
+.fresh .fresh-goods li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.fresh .fresh-goods li .img {
+    width: 236px;
+    height: 200px;
+}
+
+.fresh .fresh-goods li .img > img {
+    width: 196px;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.fresh .fresh-goods .title,
+.fresh .fresh-goods p,
+.fresh .fresh-goods .price {
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 25px;
+}
+
+.fresh .fresh-goods .price {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.fresh .fresh-goods .price > span {
+    font-size: 22px;
+}
+
+.fresh .fresh-goods li:hover {
+    border: 2px #27ba9b solid;
+
+}
+
+.fresh .fresh-goods li:hover > .find-body {
+    height: 84px;
+    padding-top: 10px;
+}
+
+.fresh .fresh-goods li .find-body {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    /*height: 84px;*/
+    height: 0;
+    width: 240px;
+    padding: 0 55px 0 55px;
+    box-sizing: border-box;
+    background-color: #27ba9b;
+    transition: all 0.2s;
+}
+
+.fresh .fresh-goods li .find-body h5 {
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 0 7px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.fresh .fresh-goods li .find-body p {
+    text-align: center;
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+.fresh .fresh-goods li .find-body a {
+    color: #333;
+}
+
+.fresh .fresh-goods li .find-body a:hover {
+    color: #fff;
+}
+
+/*------------------客服服务------------------------*/
+.concat {
+    padding-top: 75px;
+}
+
+.concat .service {
+    box-sizing: border-box;
+    padding: 0 55px;
+    width: 310px;
+    height: 151px;
+    float: left;
+}
+
+.concat .service dt {
+    color: #999;
+    text-align: center;
+    font-size: 16px;
+}
+
+.concat .service dt {
+    color: #999;
+    text-align: center;
+    font-size: 16px;
+}
+
+.concat .service dd:before {
+    content: '';
+    display: block;
+    width: 29px;
+    height: 27px;
+    margin: 20px auto 10px;
+    background: url("../img/sprites.png") -250px -70px;
+}
+
+.concat .service dd.feedback:before {
+    background: url("../img/sprites.png") -350px -70px;
+}
+
+.concat .service dd {
+    width: 92px;
+    height: 92px;
+    margin: 35px 5px 0 0;
+    box-sizing: border-box;
+    border: 1px solid #eeeeee;
+    float: left;
+    color: #333;
+    text-align: center;
+}
 
 
 
