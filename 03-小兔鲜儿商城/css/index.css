@@ -1,5 +1,5 @@
 body {
-    height: 5000px;
+    /*height: 5000px;*/
     background-color: #ffffff;
     font: 16px/1.5 sans-serif;
 }
@@ -548,7 +548,10 @@ body {
 
 /*------------------客服服务------------------------*/
 .concat {
+    height: 300px;
+    box-sizing: border-box;
     padding-top: 75px;
+    overflow: hidden;
 }
 
 .concat .service {
@@ -595,11 +598,64 @@ body {
     text-align: center;
 }
 
+/*---------------------  slogan  ---------------------*/
+.footer {
+    height: 340px;
+    background-color: #333;
+    overflow: hidden;
+}
 
+.footer .slogan {
+    height: 174px;
+    padding-top: 56px;
+    box-sizing: border-box;
+    border-bottom: 3px solid #434343;
+}
 
+.footer .slogan li {
+    float: left;
+    color: #fff;
+    width: 413px;
+    height: 58px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 58px;
+}
 
+.footer .slogan li:before {
+    content: '';
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    vertical-align: middle;
+    margin: -7px 10px 0 0;
+    background: url("../img/sprites.png") no-repeat;
+}
 
+.footer .slogan > ul > li:nth-child(2):before {
+    background: url("../img/sprites.png") -65px 0 no-repeat;
+}
 
+.footer .slogan > ul > li:nth-child(3):before {
+    background: url("../img/sprites.png") -130px 0 no-repeat;
+}
+
+.footer p {
+    margin-top: 40px;
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+}
+
+.footer p a {
+    padding: 0 8px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.footer p:last-child {
+    margin-top: 20px;
+}
 
 
 
