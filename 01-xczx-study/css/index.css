@@ -116,6 +116,9 @@ body {
     /*学习点2 background属性的使用*/
     background: #1c036c url("../img/banner.png") no-repeat top center;
 }
+.banner .w{
+    overflow: hidden;
+}
 
 .banner ul.ul-nav {
     float: left;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01-图片和文字水平居中</title>
+  <style>
+      .box {
+          width: 620px;
+          height: 660px;
+          border-radius: 5px;
+          text-align: center;
+          margin: 50px auto;
+          border: 1px solid #333;
+      }
+
+      .box img {
+          vertical-align: middle;
+      }
+
+      .span1 {
+          /*vertical-align: middle;*/
+          vertical-align: baseline;
+
+      }
+
+      input{
+          height: 50px;
+          width: 100px;
+          vertical-align: baseline;
+      }
+  </style>
+
+</head>
+<body onselectstart="return false">
+<div class="box">
+  <p>
+    <img src="./img/img1.png" alt="">
+    <!--  <span class="span1">XYzP学习</span>-->
+    <span>XXxx青春年华</span>
+  </p>
+  <br>
+  <hr>
+  <label >
+    用户名 <input type="text" placeholder="请输入用户名">
+  </label>123Xdf郭汝瑰
+
+</div>
+
+
+<script>
+</script>
+</body>
+</html>
