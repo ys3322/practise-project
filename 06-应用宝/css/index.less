@@ -1,0 +1,711 @@
+
+.w {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+html {
+  //height: 3200px;
+}
+
+//header
+.header:extend(.w) {
+  height: 66px;
+  background-color: #fff;
+
+  .logo {
+    float: left;
+    width: 161px;
+    height: 36px;
+    margin: 15px;
+    background: url("../img/logo.png");
+  }
+
+  .menu-list {
+    float: right;
+
+    li {
+      float: left;
+      width: 143px;
+      height: 65px;
+      border-left: 1px solid #ebebeb;
+      position: relative;
+
+      a {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 58px;
+        width: 143px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 58px;
+        border-top: 7px solid #fff;
+
+        i {
+          position: absolute;
+          width: 24px;
+          height: 15px;
+          top: 22px;
+          right: 14px;
+        }
+
+        i.hot {
+          background: url("../img/hot-new.png") no-repeat center;
+        }
+
+        i.new {
+          background: url("../img/new-icon.png") no-repeat center;
+
+        }
+      }
+
+      a.selected {
+        border-top: 7px solid #237ded;
+        background-color: #f9f9f9;
+      }
+    }
+
+    li.border {
+      border-right: 1px solid #ebebeb;
+    }
+  }
+}
+
+//设置mask --> 学习css3的动画
+.banner-wrapper {
+  height: 586px;
+  background-color: #fabf00;
+  position: relative;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    bottom: 0;
+    width: 400%;
+    height: 85px;
+    z-index: 5;
+  }
+
+  .mask1 {
+    height: 85px;
+    left: -236px;
+    background: url("../img/wave1.png") repeat-x;
+    animation: wave1 25s linear .4s infinite normal;
+
+  }
+
+  .mask2 {
+    height: 100px;
+    left: 0;
+    background: url("../img/wave2.png") repeat-x;
+    animation: wave2 60s linear .4s infinite normal;
+  }
+
+
+  @keyframes wave1 {
+    from {
+      left: -236px
+    }
+
+    to {
+      left: -1233px
+    }
+  }
+  @keyframes wave2 {
+    from {
+      left: 0
+    }
+
+    to {
+      left: -1233px
+    }
+  }
+}
+
+// banner
+.banner {
+  width: 100%;
+  height: 560px;
+  background-color: #434ac0;
+  position: relative;
+  // 中间的banner横幅
+  .bg-center {
+    position: absolute;
+    left: 50%;
+    // 水平居中代码
+    margin-left: -500px;
+    //只有开启定位的元素才可以设置z-index属性
+    z-index: 2;
+    width: 1000px;
+    height: 100%;
+    background: url("../img/banner1.jpg") center no-repeat;
+  }
+
+  // 左右两侧的背景线条
+  .bg-line {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    background: url("../img/bg-line.png") repeat-x;
+  }
+
+  // 左侧的渐变背景
+  .bg-left {
+    left: 0;
+  }
+
+  // 右侧的渐变背景
+  .bg-right {
+    right: 0;
+  }
+
+  //右侧的下载信息
+  .down {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    left: 50%;
+    margin-left: 150px;
+    width: 345px;
+    height: 510px;
+    z-index: 3;
+    color: #fff;
+
+    a {
+      color: #fff;
+
+      .title {
+        font-size: 18px;
+        padding: 16px 0 0 45px;
+        text-align: center;
+        width: 152px;
+        line-height: 22px;
+      }
+
+      .desc {
+        font-size: 12px;
+        margin-top: 4px;
+        text-align: center;
+        color: #ffffffb3;
+        line-height: 16px;
+      }
+    }
+
+    //pc版下载
+    .down-pc {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      width: 205px;
+      //背景图设置
+      a {
+        display: block;
+        width: 205px;
+        height: 67px;
+        background: url("../img/down-btn-right.png");
+      }
+
+    }
+
+    // 移动版下载
+    .down-mobile {
+      position: absolute;
+      right: 0;
+      top: 154px;
+      width: 205px;
+      //背景图设置
+      a {
+        display: block;
+        width: 205px;
+        height: 54px;
+        background: url("../img/down-btn-right.png") 0 -67px;
+      }
+    }
+
+    //腾讯手游助手
+    .down-game {
+      position: absolute;
+      right: 0;
+      top: 255px;
+      width: 205px;
+      //背景图设置
+      a {
+        display: block;
+        width: 205px;
+        height: 73px;
+        background: url("../img/down-btn-right.png") 0 -121px;
+      }
+    }
+
+    // 底部的版本描述信息
+    p {
+      font-size: 12px;
+      margin-top: 8px;
+      line-height: 12px;
+    }
+
+  }
+
+  // 送Q币
+  .down::before {
+    content: '送Q币';
+    position: absolute;
+    right: -8px;
+    top: 30px;
+    display: inline-block;
+    z-index: 3;
+    background-color: #ff6229;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 0 8px;
+
+  }
+
+}
+
+// 应用推荐区域
+.func-content:extend(.w) {
+  height: 280px;
+  margin-top: 30px;
+  overflow: hidden;
+  border-bottom: 1px solid #ededed;
+
+  .left {
+    float: left;
+    width: 516px;
+    margin-left: 10px;
+
+    dl:nth-child(2) {
+      background: url("../img/func3.png") no-repeat left center;
+    }
+
+    dl:nth-child(3) {
+      background: url("../img/func5.png") no-repeat left center;
+    }
+  }
+
+  .right {
+    float: right;
+    width: 434px;
+
+    dl:nth-child(1) {
+      background: url("../img/func2.png") no-repeat left center;
+    }
+
+    dl:nth-child(2) {
+      background: url("../img/func4.png") no-repeat left center;
+    }
+
+    dl:nth-child(3) {
+      background: url("../img/func6.png") no-repeat left center;
+    }
+  }
+
+  dl {
+    width: 335px;
+    margin-bottom: 40px;
+    // 设置左侧图标的方式 利用padding值 和 background-position属性
+    padding-left: 54px;
+    background: url("../img/func1.png") no-repeat left center;
+
+    //顶部标题
+    dt {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 7px;
+    }
+
+    //内容
+    dd {
+      font-size: 12px;
+      color: #4c4c4c;
+    }
+  }
+}
+
+.app-content:extend(.w) {
+  margin-top: 42px;
+  overflow: hidden;
+  //   左侧应用推荐
+  .left {
+    width: 70%;
+    float: left;
+    padding-right: 82px;
+    box-sizing: border-box;
+
+    .title {
+      position: relative;
+
+      .tab-list {
+        height: 30px;
+
+        a {
+          display: inline-block;
+          font-size: 16px;
+          color: #666;
+          height: 30px;
+          line-height: 30px;
+          margin-left: 20px;
+          border-bottom: 3px solid #fff;
+
+        }
+
+        a.current {
+          border-bottom: 3px solid #438de9;
+        }
+      }
+
+      .more {
+        position: absolute;
+        top: 0;
+        left: 463px;
+        width: 49px;
+        height: 42px;
+        //background-color: #00a4ff;
+        padding-left: 105px;
+        background: url("../img/index-spri.png") 0 -147px;
+        margin-bottom: -4px;
+
+        a {
+          display: inline-block;
+          width: 49px;
+          height: 44px;
+          background: url("../img/index-spri.png") -52px -103px;
+
+        }
+      }
+    }
+
+    .apps {
+      height: 392px;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: space-between;
+    }
+
+    .apps .app-item {
+      margin: 30px 0 0 30px;
+      width: 72px;
+      height: 157px;
+
+      img {
+        width: 72px;
+        height: 72px;
+        vertical-align: middle;
+      }
+
+      .name {
+        font-size: 12px;
+        margin-top: 4px;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+
+        white-space: nowrap;
+        word-wrap: normal;
+        word-break: normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .star {
+        position: relative;
+        width: 72px;
+        height: 12px;
+        background: url("../img/index-star.png") 0 -20px no-repeat;
+        margin-bottom: 3px;
+
+        span.score {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          width: 91.2%;
+          height: 12px;
+          background: url("../img/index-star.png") no-repeat;
+        }
+      }
+
+      .install-btn {
+        width: 65px;
+        height: 24px;
+        color: #333;
+        line-height: 24px;
+        font-size: 12px;
+        margin: 8px 0 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: #f6f6f6 url("../img/installbt.png") 0 -61px;
+      }
+    }
+  }
+
+  // 右侧排行榜
+  .right {
+    float: right;
+    width: 30%;
+    margin-left: -30px;
+
+    .title {
+      height: 30px;
+      margin-left: 10px;
+
+      .title-left {
+        float: left;
+        margin-right: 40px;
+      }
+
+      .title-right {
+        float: left;
+      }
+
+      // tab栏文字
+      a {
+        position: relative;
+        display: inline-block;
+        margin-left: 1px;
+        line-height: 30px;
+        color: #666666;
+        font-size: 16px;
+        border-bottom: 3px solid #fff;
+      }
+
+      // 选中状态时的，文字样式
+      .current1 > a, .current2 > a {
+        border-bottom: 3px solid #438de9;
+        color: #333333;
+      }
+
+      //  左侧图标选中状态
+      .current1 > span.title-left-icon {
+        // 默认选中的是第一个图标
+        background-position: 0 -64px;
+      }
+
+      //  右侧图标选中状态
+      .current2 > span.title-right-icon {
+        background-position: -27px -64px;
+      }
+
+      // 图标
+      span {
+        display: inline-block;
+        width: 14px;
+        height: 16px;
+        // 水平方向加12px，就是hover状态的图标
+        background: url("../img/index-spri.png") -12px -64px;
+        position: relative;
+        top: 2px;
+      }
+
+      //右边的图标
+      span.title-right-icon {
+        background-position: -41px -65px;
+      }
+    }
+
+    ul {
+      margin: 27px 0 0 6px;
+      padding-right: 44px;
+
+      li {
+        margin-top: 10px;
+        height: 24px;
+        line-height: 24px;
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-flow: nowrap row;
+      font-size: 12px;
+      height: 100%;
+
+      .num {
+        display: inline-block;
+        color: #666;
+        width: 26px;
+      }
+
+      .info {
+        flex: 1 0 auto;
+
+        img {
+          width: 24px;
+          height: 24px;
+          vertical-align: middle;
+        }
+
+        .name {
+          margin: 0 10px;
+          height: 24px;
+          line-height: 24px;
+        }
+      }
+
+      .count {
+        color: #999;
+      }
+    }
+  }
+
+}
+
+//底部区域
+.footer {
+  width: 100%;
+  height: 400px;
+  color: #989898;
+  background-color: #333333;
+  margin-top: 68px;
+  padding: 34px 0 30px;
+  line-height: 20px;
+
+  .footer-content {
+    width: 890px;
+    margin: 0 auto;
+
+    .footer-top {
+      // 设置overflow不为none，清除浮动，但带来的影响就是会截取不必要的部分
+      //overflow: hidden;
+
+      > div {
+        width: 33.3%;
+        float: left;
+
+        dt {
+          color: #ffffff;
+          font-size: 16px;
+          margin-bottom: 24px;
+        }
+
+        dd {
+          color: #999;
+          font-size: 14px;
+          vertical-align: top;
+          // 微博小图标 两个
+          a {
+            display: inline-block;
+            width: 23px;
+            height: 20px;
+            vertical-align: middle;
+          }
+
+          a.qqweibo {
+            //悬停状态时的背景图
+            //background: url("../img/index-spri.png") -23px -91px;
+            background: url("../img/index-spri.png") 0px -91px;
+          }
+
+          a.xinlweibo {
+            //悬停状态时的背景图
+            background: url("../img/index-spri.png") -23px -110px;
+            background: url("../img/index-spri.png") 0px -110px;
+            margin-left: -4px;
+          }
+        }
+      }
+
+      dd.weixin-yyb {
+        position: relative;
+      }
+
+      dd.weixin-yyb::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 139px;
+        height: 148px;
+        right: 8px;
+        bottom: -37px;
+        background: url("../img/index-spri.png") -535px 0;
+      }
+      // 标签清除浮动的带来的影响
+      i{
+        display: block;
+        width: 100%;
+        height: 0;
+        clear: both;
+      }
+    }
+
+    .keyword {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .office-info {
+      text-align: center;
+      line-height: 50px;
+      margin-top: 20px;
+      font-size: 12px;
+    }
+
+
+    .footer-bottom {
+      font-size: 12px;
+      text-align: center;
+      padding-top: 20px;
+
+      .links > a {
+        color: #989898;
+        padding: 8px;
+      }
+
+      .security {
+        width: 500px;
+        margin: 30px auto;
+
+
+        p {
+          float: left;
+          margin-left: 30px;
+          a{
+            float: left;
+          }
+          a:nth-child(1) {
+            display: inline-block;
+            width: 45px;
+            height: 50px;
+            padding: 3px;
+            vertical-align: center;
+          }
+          a:nth-child(2){
+            display: inline-block;
+            width: 72px;
+            height: 36px;
+            color: #fff;
+            padding: 10px 3px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
