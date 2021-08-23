@@ -14,6 +14,28 @@
     display: none;
 }
 
+/* 设计图是375像素的*/
+html {
+    /*font-size: 100px;
+      26.66667vw = 100px = 100 * 100/375px
+    */
+    font-size: 26.66666666666667vw;
+}
+
+/* 如果屏幕 小于320px  使用统一字号  */
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 85px;
+    }
+}
+
+/* 如果屏幕 大于640px  使用统一字号*/
+@media screen and (min-width: 640px) {
+    html {
+        font-size: 171px;
+    }
+}
+
 body {
     /* 在 320px - 640px之间，占满100%缩放*/
     width: 100%;
@@ -32,7 +54,7 @@ body {
 
     position: relative;
     background-color: #f6f6f6;
-    height: 4000px;
+    padding-bottom: 30px;
 
 }
 
@@ -43,7 +65,7 @@ body {
 
 /* 头部区域*/
 .header {
-    height: 45px;
+    height: 0.45rem;
     background-color: #333;
 }
 
@@ -52,7 +74,7 @@ body {
     width: 8%;
     height: 100%;
     background: url("../images/close.png") no-repeat center center;
-    background-size: 10px 10px;
+    background-size: 0.15rem 0.15rem;
 
 }
 
@@ -61,7 +83,7 @@ body {
     width: 10%;
     height: 100%;
     background: url("../images/logo.png") no-repeat center center;
-    background-size: 30px 30px;
+    background-size: 0.3rem 0.3rem;
 
 }
 
@@ -70,9 +92,9 @@ body {
     width: 57%;
     height: 100%;
     color: #fff;
-    font-size: 14px;
-    padding-top: 2px;
-    line-height: 45px;
+    font-size: 0.14rem;
+    padding-top: 0.02rem;
+    line-height: 0.45rem;
     text-align: center;
     font-weight: 400;
 
@@ -84,21 +106,22 @@ body {
     height: 100%;
     background-color: #f63515;
     color: #fff;
-    line-height: 45px;
+    font-size: .14rem;
+    line-height: 0.45rem;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 0.02rem;
 
 }
 
 /*搜索区域*/
-.nav  {
+.nav {
     position: relative;
     background-color: #c82519;
-    height: 44px;
+    height: 0.44rem;
     color: #fff;
     justify-content: space-between;
     align-items: center;
-    line-height: 44px;
+    line-height: 0.44rem;
     overflow: hidden;
 }
 
@@ -106,58 +129,58 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 40px;
-    height: 44px;
+    width: 0.4rem;
+    height: 0.44rem;
     text-align: center;
 }
 
 .nav .menu i {
     display: inline-block;
-    width: 20px;
-    height: 18px;
+    width: 0.2rem;
+    height: 0.18rem;
     background: url("../images/s-btn.png") no-repeat;
     background-size: cover;
-    margin: 14px 0 0 15px;
+    margin: 0.14rem 0 0 0.15rem;
 }
 
 .nav .search {
-    margin: 7px 50px;
-    border-radius: 16px;
+    margin: 0.07rem 0.5rem;
+    border-radius: 0.16rem;
     background-color: #fff;
     /*border-radius: 10px;*/
-    height: 30px;
-    line-height: 30px;
+    height: 0.3rem;
+    line-height: 0.3rem;
 }
 
 .nav .search .logo {
     position: relative;
     display: inline-block;
-    width: 20px;
-    height: 15px;
+    width: 0.2rem;
+    height: 0.15rem;
     background: url("../images/jd.png") no-repeat center;
     background-size: cover;
-    margin: 8px 8px 0 15px;
-    border-right: 1px solid #dddddd;
+    margin: 0.08rem 0.08rem 0 0.15rem;
+    border-right: 0.01rem solid #dddddd;
 }
 
 .nav .search .logo:before {
     content: "";
     position: absolute;
-    border-right: 1px solid #ddd;
+    border-right: 0.01rem solid #ddd;
     top: 0;
-    left: 26px;
-    height: 16px;
+    left: 0.36rem;
+    height: 0.16rem;
 }
 
 /* 搜索图标 */
 .nav .search .search-icon {
     display: inline-block;
-    width: 20px;
-    height: 15px;
+    width: 0.2rem;
+    height: 0.15rem;
     /* 使用的背景精灵图是2倍图 */
     /* 二倍精灵图的做法*/
-    background: url(../images/jd-sprites.png) no-repeat -81px 0;
-    background-size: 200px auto;
+    background: url(../images/jd-sprites.png) no-repeat -0.81rem 0;
+    background-size: 2rem auto;
 }
 
 .nav .search input {
@@ -165,10 +188,10 @@ body {
     border: none;
     display: inline-block;
     box-sizing: border-box;
-    height: 16px;
-    font-size: 12px;
+    height: 0.16rem;
+    font-size: 0.12rem;
     position: relative;
-    top: -3px;
+    top: -0.03rem;
 }
 
 .nav .login {
@@ -176,46 +199,51 @@ body {
     right: 0;
     top: 0;
     display: inline-block;
-    width: 40px;
-    height: 44px;
-    font-size: 14px;
+    width: 0.4rem;
+    height: 0.44rem;
+    font-size: 0.14rem;
 }
 
 
 /* banner区域*/
 /*banner背景图*/
-.banner-bg {
+.banner-content {
     position: relative;
+}
+.banner-bg{
+    position: absolute;
     width: 100%;
-    height: 100px;
+    height: 1rem;
     background-color: #c82519;
-    border-bottom-right-radius: 150%;
-    border-bottom-left-radius: 150%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
     /*overflow: hidden;*/
 }
-
-.banner-bg .dots {
+.banners-wrap{
+    position: relative;
+}
+.banners-wrap .dots {
     position: absolute;
     z-index: 1;
-    bottom: -36px;
+    bottom: 0.02rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
-    height: 16px;
+    width: 0.6rem;
+    height: 0.16rem;
     /*background-color: red;*/
-    line-height: 16px;
+    line-height: 0.16rem;
 }
 
-.banner-bg .dots .dot {
+.banners-wrap .dots .dot {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin-left: 4px;
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-left: 0.04rem;
     border-radius: 50%;
     background-color: #ffffffAA;
 }
 
-.banner-bg .dots .active {
+.banners-wrap .dots .active {
     background-color: #fff;
 }
 
@@ -224,6 +252,7 @@ body {
     width: 400%;
     position: relative;
     left: -100%;
+    overflow: hidden;
 }
 
 .banners li {
@@ -239,17 +268,19 @@ body {
 
 .banners li img {
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
+    /*height: 1.38rem;*/
+    height: 1.38rem;
     vertical-align: middle;
-    border-radius: 16px;
+    border-radius: 0.16rem;
 }
 
 /* 中间的应用推荐*/
 .nav-menu {
     width: 100%;
     position: relative;
-    margin-top: 40px;
-    padding-bottom: 10px;
+    margin-top: 0.03rem;
+    padding-bottom: 0.1rem;
 }
 
 .nav-menu .apps {
@@ -260,9 +291,9 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: space-evenly;
-    font-size: 12px;
+    font-size: 0.12rem;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 0.1rem;
 }
 
 .nav-menu .apps .app {
@@ -275,28 +306,28 @@ body {
 }
 
 .nav-menu .apps .app img {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 6px;
+    width: .4rem;
+    height: .4rem;
+    margin-bottom: .06rem;
 
 }
 
 .nav-menu .dots {
     width: 100%;
-    height: 8px;
-    line-height: 8px;
+    height: .08rem;
+    line-height: .08rem;
     position: absolute;
-    bottom: 8px;
+    bottom: .08rem;
     text-align: center;
     z-index: 1;
 }
 
 .nav-menu .dots span {
     display: inline-block;
-    width: 5px;
-    height: 5px;
+    width: .05rem;
+    height: .05rem;
     border-radius: 50%;
-    margin-right: 2px;
+    margin-right: .02rem;
     background-color: #8c8c8c;
 }
 
@@ -305,7 +336,7 @@ body {
 }
 
 .seckill {
-    padding: 0 10px 10px;
+    padding: 0 .1rem 0.1rem;
 }
 
 .seckill-container {
@@ -316,13 +347,13 @@ body {
 
 .seckill-top {
     /*height: 34px;*/
-    line-height: 34px;
+    line-height: .34rem;
     /* 触发bfc，格式化上下文*/
     overflow: hidden;
     background: #fff url("../images/seckill-top-bg.png");
     background-size: cover;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: .1rem;
+    border-top-left-radius: .1rem;
 }
 
 .seckill-top .left {
@@ -335,38 +366,38 @@ body {
 
 .seckill-top .left h3 {
     font-weight: 400;
-    font-size: 14px;
-    margin: 0 5px 0 10px;
+    font-size: .14rem;
+    margin: 0 .05rem 0 .1rem;
 }
 
 .seckill-top .left .order {
     position: relative;
     color: #ff2727;
     display: block;
-    margin-right: 30px;
+    margin-right: .3rem;
 }
 
 .seckill-top .left .order::after {
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: .08rem;
+    left: .16rem;
     content: '';
     display: block;
-    width: 20px;
-    height: 17px;
+    width: .2rem;
+    height: 0.17rem;
     background: url("../images/seckill-time-to_1de70c91.png");
     background-size: cover;
 }
 
 .seckill-top .left .timer {
     color: #fc402f;
-    line-height: 34px;
+    line-height: 0.34rem;
 }
 
 .seckill-top .left .timer b {
     display: inline-block;
-    width: 6px;
-    font-size: 16px;
+    width: 0.06rem;
+    font-size: 0.16rem;
     font-weight: 600;
     text-align: center;
     float: left;
@@ -375,46 +406,46 @@ body {
 .seckill-top .left .timer span {
     float: left;
     display: inline-block;
-    width: 15px;
-    height: 18px;
-    line-height: 18px;
+    width: .15rem;
+    height: .18rem;
+    line-height: .18rem;
     text-align: center;
     background-color: #fc402f;
     color: #fff;
-    font-size: 12px;
-    border-radius: 4px;
-    margin-top: 8px;
+    font-size: .12rem;
+    border-radius: .04rem;
+    margin-top: .08rem;
 
 }
 
 .seckill-top .right {
     float: right;
     color: #fc402f;
-    font-size: 12px;
-    margin-right: 8px;
+    font-size: 0.12rem;
+    margin-right: 0.08rem;
 }
 
 .seckill-top .right i {
     display: inline-block;
-    width: 11px;
-    height: 11px;
+    width: 0.11rem;
+    height: 0.11rem;
     background: url("../images/arrow_rt_2ccb8cd5.png");
     background-size: cover;
-    margin-left: 2px;
+    margin-left: 0.02rem;
     vertical-align: middle;
 }
 
 .seckill-content {
     /* 百分比布局不需要设置高度*/
     /*height: 106px;*/
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    padding: 0 6px;
+    border-bottom-right-radius: 0.10rem;
+    border-bottom-left-radius: 0.10rem;
+    padding: 0 0.06rem;
 }
 
 .seckill-items {
     display: flex;
-    flex-direction: row;
+    flex-direction: rem;
     flex-grow: 0;
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -431,79 +462,80 @@ body {
 }
 
 .seckill-items .item img {
-    width: 55px;
-    height: 55px;
+    width: 0.55rem;
+    height: 0.55rem;
     vertical-align: center;
 }
 
 .seckill-items .item .current-price {
-    margin-top: 6px;
+    margin-top: .06rem;
     color: #f2270c;
-    font-size: 13px;
+    font-size: 0.13rem;
     font-weight: 600;
 
 }
 
 .seckill-items .item span {
     display: inline-block;
-    height: 14px;
+    height: 0.14rem;
 }
 
 .seckill-items .item .old-price {
     color: #999999;
-    margin-top: 2px;
-    font-size: 12px;
+    margin-top: 0.02rem;
+    font-size: .12rem;
     text-decoration: line-through;
 }
 
 .seckill-items .all-item::before {
     display: inline-block;
     content: '';
-    width: 12px;
-    height: 12px;
-    background: url('../images/jd-sprites2.png') -107px -109px;
-    background-size: 200px;
+    width: .12rem;
+    height: .12rem;
+    background: url('../images/jd-sprites2.png') -1.07rem -1.09rem;
+    background-size: 2.00rem;
 }
 
 .seckill-items .all-item {
     background-color: #f5f5f5;
-    margin-left: 6px;
-    padding: 10px 2px;
-    font-size: 12px;
-    width: 12px;
+    margin: 0 0.06rem 0 ;
+    padding: .10rem 0.02rem;
+    font-size: .12rem;
+    width: .3rem;
+    border-radius: 0.05rem;
 }
 
 /*商品推荐*/
 .recommend {
-    margin: 0 10px;
+    margin: 0 0.10rem;
 
 }
 
 .recommend .hot {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 0.30rem;
     justify-content: space-between;
-    padding: 6px 10px;
+    padding: 0.06rem 0.10rem;
     background-color: #fff;
 }
 
 .recommend .hot span {
-    font-size: 16px;
+    font-size: 0.16rem;
     font-weight: 700;
     color: #000;
 }
 
 .recommend .hot p {
-    font-size: 12px;
+    font-size: 0.12rem;
     color: #666771;
 }
 
 
 .recommend .hot img {
-    width: 60px;
-    height: 60px;
+    width: 0.60rem;
+    height: 0.60rem;
     vertical-align: middle;
-    margin: 5px 7px 0;
+    margin: 0.05rem 0.07rem 0;
 }
 
 .recommend .items {
@@ -521,22 +553,22 @@ body {
     flex-shrink: 0;
     flex-grow: 0;
     background-color: #fff;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 0.10rem;
+    margin-bottom: 0.10rem;
 }
 
 .recommend .items .item img {
     /*width: 173px;*/
     /*height: 173px;*/
     width: 100%;
-    border-radius: 6px;
+    border-radius: 0.06rem;
 }
 
 
 .recommend .items .item p {
     box-sizing: border-box;
-    height: 31px;
-    font-size: 13px;
+    height: 0.31rem;
+    font-size: 0.13rem;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -544,79 +576,46 @@ body {
     -webkit-box-orient: vertical;
     word-break: break-all;
     color: #1a1a1a;
-    margin-top: 5px;
-    line-height: 16px;
-    margin-bottom: 3px;
-    padding: 0 4px;
+    margin-top: 0.05rem;
+    line-height: 0.16rem;
+    margin-bottom: 0.03rem;
+    padding: 0 0.04rem;
 }
 
 .recommend .items .item .info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 6px;
-    margin-left: 8px;
-    padding-bottom: 12px;
+    margin-top: 0.06rem;
+    margin-left: 0.08rem;
+    padding-bottom: 0.12rem;
 }
 
 .recommend .items .item .info .price {
     color: #fa2c19;
-    line-height: 25px;
+    line-height: 0.25rem;
 }
 
 .recommend .items .item .info .price i {
-    font-size: 13px;
+    font-size: 0.13rem;
     text-decoration: none;
     font-style: normal;
 
 }
 
 .recommend .items .item .info .price span {
-    font-size: 16px;
+    font-size: 0.16rem;
 
 }
 
 .recommend .items .item .info .find {
     background-color: #f0f2f5;
-    height: 20px;
+    height: 0.20rem;
     color: #808080;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    font-size: 12px;
+    border-top-left-radius: 0.10rem;
+    border-bottom-left-radius: 0.10rem;
+    font-size: 0.12rem;
     text-align: center;
-    line-height: 20px;
-    padding: 0 5px 0 5px;
+    line-height: 0.20rem;
+    padding: 0 0.05rem 0 0.05rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
