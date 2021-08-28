@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "微软雅黑";
+}
+a{
+  color: #000000;
+}
+button,input{
+  border: none;
+  outline: none;
+}
+html{
+  /* 设计图是375像素， 1px = 0.26666667vw  100px = 26.666666666667vw*/
+  font-size: 26.666666666666667vw;
+}
+body{
+  background-color: #c4d3c4;
+  min-width: 320px;
+}
+@media screen and (max-width: 320px){
+  html{
+    font-size: 85.3px;
+  }
+}
+
+@media screen and (min-width: 720px){
+  html{
+    font-size: 192px;
+  }
+}
