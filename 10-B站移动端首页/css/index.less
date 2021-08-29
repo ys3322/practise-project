@@ -1,0 +1,227 @@
+*, body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+// 隐藏滚动条
+::-webkit-scrollbar {
+  display: none;
+}
+
+@baseColor: #fb7299;
+// 顶部固定导航 logo + channel
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #fff;
+  width: 100vw;
+  height: 22.4vw;
+  overflow: hidden;
+  // 最顶部的logo信息
+  .my-navbar {
+    padding: 0 3.2vw 0 4.8vw;
+    height: 11.73vw;
+    display: flex;
+    align-items: center;
+
+    a.logo {
+      flex: 1;
+      width: 16.53vw;
+      height: 7.47vw;
+
+      &:before {
+        content: "\e614";
+        font-size: 7.47vw;
+        color: @baseColor;
+      }
+    }
+
+    .search-icon {
+      width: 5.87vw;
+      height: 5.87vw;
+      margin-right: 5.87vw;
+
+      &:before {
+        content: "\e615";
+        font-size: 5.76vw;
+        color: #ccc;
+      }
+    }
+
+    .avatar {
+      width: 6.4vw;
+      height: 6.4vw;
+      margin-right: 3.2vw;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .download {
+      width: 19.2vw;
+      height: 6.4vw;
+      margin-left: 2.13vw;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // 频道列表
+  .channel-navbar {
+    height: 10.67vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    // 滚动
+    ul.channels {
+      display: flex;
+      width: 380%;
+      height: 10.67vw;
+      flex-flow: nowrap row;
+
+      .link-item {
+        margin: 0 4.3vw;
+        flex-shrink: 0;
+        line-height: 11.67vw;
+
+        a {font-size: 3.75vw;
+          font-family: -apple-system, BlinkMacSystemFont,
+          PingFang SC, Source Han Sans SC, Helvetica Neue,
+          Microsoft YaHei, Noto Sans CJK SC,
+          WenQuanYi Micro Hei, sans-serif;;
+        }
+
+        &.active {
+          color: @baseColor;
+          border-bottom: 0.53vw solid @baseColor;
+        }
+      }
+    }
+
+    // 下拉展开
+    .pull-down {
+      position: absolute;
+      right: 0;
+      top: 2.7vw;
+      width: 10.67vw;
+      height: 6.19vw;
+      text-align: center;
+      background-color: #fff;
+
+      span:before {
+        content: "\e6eb";
+        display: inline-block;
+        width: 5.33vw;
+        height: 5.33vw;
+        font-size: 5.33vw;
+        color: #aaa;
+      }
+    }
+  }
+}
+
+//中间的内容区域
+.content {
+  margin: 22.4vw 1.33vw;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  .item {
+    width: 50%;
+    padding: 2.13vw 1.33vw;
+
+    // 图片
+    .img {
+      position: relative;
+      width: 45.87vw;
+      height: 26.13vw;
+
+      img {
+        width: 100%;
+      }
+      // 播放量  弹幕量
+      .info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 7.57vw;
+        padding: 1.33vw 1.6vw;
+        background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.85), transparent);
+        color: #fff;
+        font-size: 3.2vw;
+        display: flex;
+        // 主轴方向上空白如何分布。空白都分布在中间，内容两端对齐
+        justify-content: space-between;
+
+        .icon {
+          margin-right: 0.5vw;
+
+          &:before {
+            font-size: 4.27vw;
+          }
+        }
+
+        .play-count .icon:before {
+          content: "\e617";
+        }
+
+        .danmu-count .icon:before {
+          content: "\e616";
+        }
+      }
+    }
+
+    // 视频标题
+    .title {
+      font-size: 3.2vw;
+      margin-top: 1.6vw;
+      color: #212121;
+      // 文字溢出隐藏
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+// 底部打开app
+.open-app {
+  position: fixed;
+  bottom: 8vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  height: 9.6vw;
+  width: 93.6vw;
+  line-height: 9.6vw;
+  text-align: center;
+  border-radius: 6.66667vw;
+  background-color: @baseColor;
+  color: #fff;
+  font-size: 3.73333vw;
+
+  .icon {
+    margin-right: 2.67vw;
+
+    &:before {
+      content: "\e614";
+      font-size: 4.27vw;
+    }
+  }
+}

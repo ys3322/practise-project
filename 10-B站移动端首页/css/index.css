@@ -1,0 +1,184 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #fff;
+  width: 100vw;
+  height: 22.4vw;
+  overflow: hidden;
+}
+.navbar .my-navbar {
+  padding: 0 3.2vw 0 4.8vw;
+  height: 11.73vw;
+  display: flex;
+  align-items: center;
+}
+.navbar .my-navbar a.logo {
+  flex: 1;
+  width: 16.53vw;
+  height: 7.47vw;
+}
+.navbar .my-navbar a.logo:before {
+  content: "\e614";
+  font-size: 7.47vw;
+  color: #fb7299;
+}
+.navbar .my-navbar .search-icon {
+  width: 5.87vw;
+  height: 5.87vw;
+  margin-right: 5.87vw;
+}
+.navbar .my-navbar .search-icon:before {
+  content: "\e615";
+  font-size: 5.76vw;
+  color: #ccc;
+}
+.navbar .my-navbar .avatar {
+  width: 6.4vw;
+  height: 6.4vw;
+  margin-right: 3.2vw;
+}
+.navbar .my-navbar .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+.navbar .my-navbar .download {
+  width: 19.2vw;
+  height: 6.4vw;
+  margin-left: 2.13vw;
+}
+.navbar .my-navbar .download img {
+  width: 100%;
+}
+.navbar .channel-navbar {
+  height: 10.67vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+.navbar .channel-navbar ul.channels {
+  display: flex;
+  width: 380%;
+  height: 10.67vw;
+  flex-flow: nowrap row;
+}
+.navbar .channel-navbar ul.channels .link-item {
+  margin: 0 4.3vw;
+  flex-shrink: 0;
+  line-height: 11.67vw;
+}
+.navbar .channel-navbar ul.channels .link-item a {
+  font-size: 3.75vw;
+  font-family: -apple-system, BlinkMacSystemFont, PingFang SC, Source Han Sans SC, Helvetica Neue, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+}
+.navbar .channel-navbar ul.channels .link-item.active {
+  color: #fb7299;
+  border-bottom: 0.53vw solid #fb7299;
+}
+.navbar .channel-navbar .pull-down {
+  position: absolute;
+  right: 0;
+  top: 2.7vw;
+  width: 10.67vw;
+  height: 6.19vw;
+  text-align: center;
+  background-color: #fff;
+}
+.navbar .channel-navbar .pull-down span:before {
+  content: "\e6eb";
+  display: inline-block;
+  width: 5.33vw;
+  height: 5.33vw;
+  font-size: 5.33vw;
+  color: #aaa;
+}
+.content {
+  margin: 22.4vw 1.33vw;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.content .item {
+  width: 50%;
+  padding: 2.13vw 1.33vw;
+}
+.content .item .img {
+  position: relative;
+  width: 45.87vw;
+  height: 26.13vw;
+}
+.content .item .img img {
+  width: 100%;
+}
+.content .item .img .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 7.57vw;
+  padding: 1.33vw 1.6vw;
+  background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0.85), transparent);
+  color: #fff;
+  font-size: 3.2vw;
+  display: flex;
+  justify-content: space-between;
+}
+.content .item .img .info .icon {
+  margin-right: 0.5vw;
+}
+.content .item .img .info .icon:before {
+  font-size: 4.27vw;
+}
+.content .item .img .info .play-count .icon:before {
+  content: "\e617";
+}
+.content .item .img .info .danmu-count .icon:before {
+  content: "\e616";
+}
+.content .item .title {
+  font-size: 3.2vw;
+  margin-top: 1.6vw;
+  color: #212121;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.open-app {
+  position: fixed;
+  bottom: 8vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  height: 9.6vw;
+  width: 93.6vw;
+  line-height: 9.6vw;
+  text-align: center;
+  border-radius: 6.66667vw;
+  background-color: #fb7299;
+  color: #fff;
+  font-size: 3.73333vw;
+}
+.open-app .icon {
+  margin-right: 2.67vw;
+}
+.open-app .icon:before {
+  content: "\e614";
+  font-size: 4.27vw;
+}
+/*# sourceMappingURL=index.css.map */
