@@ -2,8 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>项目导航</title>
   <style>
+    html{
+      font-size: 25vw;
+    }
+
+    @media screen and (max-width:320px){
+      html{
+        font-size: 80px;
+      }
+    }
+    @media screen and (min-width: 650px){
+      html{
+        font-size: 120px;
+      }
+    }
+
     * {
       padding: 0;
       margin: 0;
@@ -20,28 +37,31 @@
 
     body {
       background-color: #ffffff;
-      padding-bottom: 26.67vw;
+      padding-bottom: 2rem;
+      overflow-x: hidden;
     }
 
     h2 {
       background-color: #00a4ff;
-      padding: 2.13vw;
+      padding: 0.16rem;
       color: #fff;
-      font-size: 3.73vw;
+      font-size: 0.28rem;
       text-align: center;
+      width: 100%;
+      min-width: 320px;
     }
 
     .center {
-      width: 50.67vw;
+      width: 3.8rem;
       text-align: center;
-      margin: 2.67vw auto;
-      border: 2px solid #00a4ff;
-      border-radius: 2.13vw;
+      margin: 0.2rem auto;
+      border: 0.02rem solid #00a4ff;
+      border-radius: 0.16rem;
     }
 
     .center li {
       /*border-bottom: 2px solid #00a4ff;*/
-      font-size: 3.2vw;
+      font-size: 0.22rem;
       font-weight: 900;
       color: #00a4ff;
       text-align: left;
@@ -49,16 +69,16 @@
 
     .center a {
       display: block;
-      border-radius: 1.33vw;
-      padding: 0.8vw 2.67vw;
-      line-height: 5.6vw;
+      border-radius: 0.1rem;
+      padding: 0.06rem 0.2rem;
+      line-height: 0.42rem;
       color: #00a4ff;
     }
 
     .center a:hover {
       color: #fff;
       background-color: #00a4ff;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, .3);
+      box-shadow: 0.04rem 0.04rem 0.1rem rgba(0, 0, 0, .3);
     }
   </style>
 
@@ -71,7 +91,7 @@
     <li><a href="./02-pyh-mall/index.html">2. 品优购商城-首页</a></li>
     <li><a href="./03-小兔鲜儿商城/index.html">3. 小兔鲜儿商城-首页</a></li>
     <li><a href="./04-baidu-search/index.html">4. 百度搜索</a></li>
-    <li><a href="./05-mobile-爱学习案例/02-爱学习-移动端布局.html">5 爱学习-移动端布局</a></li>
+    <li><a href="./05-mobile-爱学习案例/02-爱学习-移动端布局.html">5. 爱学习-移动端布局</a></li>
     <li><a href="./06-应用宝/index.html">6. 腾讯-应用宝首页</a></li>
     <li><a href="./07-京东移动端案例/index.html">7. 京东移动端首页</a></li>
     <li><a href="./08-携程网移动端布局/index.html">8. 携程网移动端首页</a></li>
