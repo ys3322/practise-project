@@ -90,9 +90,9 @@ body {
   border-bottom: 0.53vw solid #fb7299;
 }
 .navbar .channel-navbar .pull-down {
-  position: absolute;
+  position: fixed;
   right: 0;
-  top: 2.7vw;
+  top: 15vw;
   width: 10.67vw;
   height: 6.19vw;
   text-align: center;
